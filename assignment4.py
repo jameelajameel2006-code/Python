@@ -1,29 +1,48 @@
-name=input("Enter name:")
-age=int(input("Enter age:"))
-exam_score=int(input("Enter exam score:"))
-family_income=float(input("Enter family income:"))
-
-if age<16:
-	print("Sorry,too young.")
-elif exam_score<60:
-	print("Exam_score too low.")
- 
-
-if family_income<30000:
-	decision="Admitted with full scholarship"
-elif family_income<80000:
-	decision="Admitted with partial scholarship"
-else:
-	decision="Admitted without scholarship"
-
-print(name,decision)
+print("Assignment1:Number Analysis Program")
+for i in range(1,11):
+	if i%2==0: #2,4,6,8
+		print(i,"=Even")
+	else:
+		print(i,"=Odd")
+	if i%3==0: #3,6,9
+		print("Divisable by 3")
 
 
-num1=int(input("Enter the first number:"))
-num2=int(input("Enter the second number:"))
-print("Before swap:")
-print(("a="),num1)
-print(("b="),num2)
+print("Bonus Task:")
+count=2
+while count<=10:
+	print("Count:",count)
+	count+=2
+	
 
 
 
+
+
+
+
+print("Assignment2:Student Marks Analyzer")
+passed=0
+failed=0
+highest=0
+for i in range(1,6):
+	marks=int(input(f"Enter marks of Student {i}:"))
+	if marks>highest:
+		highest=marks
+	if marks>=80:
+		grade=("A")
+		passed=passed+1
+	elif marks>=60:
+		grade=("B")
+		passed=passed+1
+	elif marks>=50:
+		grade=("C")
+		passed=passed+1
+	else:
+		print("Fail")
+		failed=failed+1
+	print(f"Students {i}:{grade}")
+
+print("Total passed:",passed)
+print("Total failed:",failed)
+print("Highest marks:",highest)
